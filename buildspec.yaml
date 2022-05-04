@@ -10,4 +10,5 @@ phases:
     commands:
       - echo BUILD COMPLETED!
       - echo EXECUTAR E2E
-      - echo $TOKEN
+      - curl -X POST 'https://api.github.com/repos/ZupIT/itau-supernova-tests/dispatches' -H 'Accept: application/vnd.github.everest-preview+json' -i -u $TOKEN --data '{"event_type": "Start E2E Supernova", "client_payload": { "repository": "teste-repo" }}'
+      - echo ACABOU

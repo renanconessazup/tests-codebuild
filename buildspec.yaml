@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  build:
+    on-failure: ABORT
+    commands:
+      - echo Build started on `date`
+  post_build:
+    on-failure: ABORT
+    commands:
+      - echo BUILD COMPLETED!
+      - echo EXECUTAR E2E
+      - echo $TOKEN
